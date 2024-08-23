@@ -7,12 +7,12 @@ const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Mission', path: '/mission' },
-    { name: 'Community', path: '/community' },
-    { name: 'Shelter', path: '/shelter' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Home', path: '/ceam-app/' },
+    { name: 'About', path: '/ceam-app/about' },
+    { name: 'Mission', path: '/ceam-app/mission' },
+    { name: 'Community', path: '/ceam-app/community' },
+    { name: 'Shelter', path: '/ceam-app/shelter' },
+    { name: 'Contact', path: '/ceam-app/contact' },
   ];
 
   return (

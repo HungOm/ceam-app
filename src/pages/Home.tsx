@@ -29,7 +29,7 @@ const Home = () => (
         </p>
         {/* Add more content here */}
         <div className="mt-8 text-center">
-          <Link to="/about" className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300 inline-flex items-center">
+          <Link to="/ceam-app/about" className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300 inline-flex items-center">
             Learn More About Our Work
             <ArrowRight className="ml-2" />
           </Link>
