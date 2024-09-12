@@ -16,7 +16,7 @@ const Home = () => (
     </Helmet>
     <div>
       <div className="relative h-64 md:h-96 mb-8">
-        <img src="/ceam-app/images/cover-photo.png" alt="Refugees helping each other" className="w-full h-full object-cover" />
+        <img src="/images/cover-photo.png" alt="Refugees helping each other" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center px-4">
             Supporting K'Cho Refugees in Malaysia
@@ -29,7 +29,7 @@ const Home = () => (
         </p>
         {/* Add more content here */}
         <div className="mt-8 text-center">
-          <Link to="/ceam-app/about" className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300 inline-flex items-center">
+          <Link to="/about" className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300 inline-flex items-center">
             Learn More About Our Work
             <ArrowRight className="ml-2" />
           </Link>

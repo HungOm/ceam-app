@@ -17,12 +17,12 @@ function App() {
           <Navigation />
           <main className="flex-grow">
             <Routes>
-              <Route path="/ceam-app/" element={<Home />} />
-              <Route path="/ceam-app/about" element={<About />} />
-              <Route path="/ceam-app/mission" element={<Mission />} />
-              <Route path="/ceam-app/community" element={<Community />} />
-              <Route path="/ceam-app/shelter" element={<Shelter />} />
-              <Route path="/ceam-app/contact" element={<Contact />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/mission" element={<Mission />} />
+              <Route path="/community" element={<Community />} />
+              <Route path="/shelter" element={<Shelter />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>
           <Footer />
