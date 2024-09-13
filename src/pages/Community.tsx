@@ -6,12 +6,12 @@ const Community = () => (
     <Helmet>
       <title>Community Efforts | CEAM - Supporting K'Cho Refugees in Malaysia</title>
       <meta name="description" content="CEAM's community efforts for K'Cho refugees from Chin State, Myanmar in Malaysia. Services include education, healthcare, cultural preservation, and UNHCR registration support for Dai/Daai, Mün, Kaang communities." />
-      <meta name="keywords" content="CEAM Community Services, K'Cho Refugee Support, Chin State, Myanmar Refugees, Malaysia, Dai, Daai, Mün, Kaang, Mindat, Kanpetlet, Matupi, Paletwa, Education, Healthcare, UNHCR Registration, Cultural Preservation" />
+      <meta name="keywords" content="CEAM Community Services, K'Cho Refugee Support, Chin State, Myanmar Refugees,Chin, Chin Refugees, K'Cho Refugees in Malaysia, Dai, Daai, Mün, Kaang, Mindat, Kanpetlet, Matupi, Paletwa, Education, Healthcare, UNHCR Registration, Cultural Preservation" />
       <meta property="og:title" content="CEAM Community Efforts for K'Cho Refugees in Malaysia" />
       <meta property="og:description" content="Explore CEAM's community services for K'Cho refugees from Chin State, Myanmar in Malaysia. Education, healthcare, cultural preservation, and UNHCR support." />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://www.ceamalaysia.org/community" />
-      <meta property="og:image" content="https://www.ceamalaysia.org/images/ceam-community.jpg" />
+      <meta property="og:image" content="https://www.ceamalaysia.org/images/cea-social-share.png" />
     </Helmet>
     <div className="max-w-4xl mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold mb-6">Our Community Efforts</h2>

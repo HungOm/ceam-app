@@ -10,7 +10,7 @@ const Contact = () => (
       <meta property="og:description" content="Contact CEAM to support or seek assistance for K'Cho refugees from Chin State, Myanmar in Malaysia. Help Dai/Daai, Mün, Kaang, and other Chin ethnic communities." />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://www.ceamalaysia.org/contact" />
-      <meta property="og:image" content="https://www.ceamalaysia.org/images/contact-ceam.jpg" />
+      <meta property="og:image" content="https://www.ceamalaysia.org/images/cea-social-share.png" />
     </Helmet>
     <div className="max-w-4xl mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
@@ -21,8 +21,8 @@ const Contact = () => (
         Due to the informal nature of our organization, we do not have a physical office. Please contact us through the following methods:
       </p>
       <ul className="list-disc pl-6 mb-4 text-lg">
-        <li>Email: info@ceamalaysia.org</li>
-        <li>Phone: +60 1XX XXX XXXX</li>
+        <li>Email: ceamalaysia2018@gmail.com</li>
+        <li>Phone: +60 11-6812 8634</li>
       </ul>
       <p className="mb-4 text-lg">
         For security and privacy reasons, we may not be able to provide detailed information about our activities or members over public channels. We appreciate your understanding.

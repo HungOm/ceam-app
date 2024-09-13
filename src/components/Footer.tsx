@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
       <div>
         <h3 className="text-xl font-semibold mb-4">About CEAM</h3>
-        <p>Supporting K'Cho refugees and asylum-seekers in Malaysia since [Year].</p>
+        <p>Supporting K'Cho refugees and asylum-seekers in Malaysia since 2018.</p>
       </div>
       <div>
         <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
@@ -22,7 +22,7 @@ const Footer = () => (
         <h3 className="text-xl font-semibold mb-4">Connect With Us</h3>
         <p>Email: info@ceamalaysia.org</p>
         <p>Shelter: kchoshelter@ceamalaysia.org</p>
-        <p>Phone: +60 1XX XXX XXXX</p>
+        <p>Phone: +60 17-953 3189</p>
       </div>
     </div>
     <div className="mt-8 text-center text-gray-400">

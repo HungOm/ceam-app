@@ -10,7 +10,7 @@ const About = () => (
       <meta property="og:description" content="CEAM supports K'Cho refugees from Chin State, Myanmar in Malaysia. Learn about our work with Dai/Daai, Mün, Kaang, and other Chin ethnic communities." />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://www.ceamalaysia.org/about" />
-      <meta property="og:image" content="https://www.ceamalaysia.org/images/about-ceam.jpg" />
+      <meta property="og:image" content="https://www.ceamalaysia.org/images/cea-social-share.png" />
     </Helmet>
     <div className="max-w-4xl mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold mb-6">About Us</h2>

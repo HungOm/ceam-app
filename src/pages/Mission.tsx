@@ -5,12 +5,12 @@ const Mission = () => (
     <Helmet>
       <title>Our Mission | CEAM - Empowering K'Cho Refugees in Malaysia</title>
       <meta name="description" content="CEAM's mission is to empower K'Cho refugees from Chin State, Myanmar in Malaysia. We focus on community support, cultural preservation, and integration for Dai/Daai, Mün, Kaang, and other Chin ethnic groups." />
-      <meta name="keywords" content="CEAM Mission, K'Cho Empowerment, Chin Refugees, Myanmar Refugees in Malaysia, Dai, Daai, Mün, Kaang, Mindat, Kanpetlet, Cultural Preservation, Refugee Integration" />
+      <meta name="keywords" content="CEAM Mission, K'Cho Empowerment, Chin Refugees, Myanmar Refugees in Malaysia,Chin Refugee In Malaysia, Help K'Cho Refugees, Dai, Daai, Mün, Kaang, Mindat, Kanpetlet, Cultural Preservation, Refugee Integration" />
       <meta property="og:title" content="CEAM Mission - Empowering K'Cho Refugees in Malaysia" />
       <meta property="og:description" content="Discover CEAM's mission to empower K'Cho refugees from Chin State, Myanmar in Malaysia. Focus on community support, cultural preservation, and integration." />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://www.ceamalaysia.org/mission" />
-      <meta property="og:image" content="https://www.ceamalaysia.org/images/ceam-mission.jpg" />
+      <meta property="og:image" content="https://www.ceamalaysia.org/images/cea-social-share.png" />
     </Helmet>
     <div className="max-w-4xl mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold mb-6">Our Mission and Vision</h2>

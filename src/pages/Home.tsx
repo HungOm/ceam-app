@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Home = () => (
   <>
     <Helmet>
-      <title>CEAM - Supporting K'Cho Refugees in Malaysia | Chin Ethnic Association</title>
+      <title>CEAM - Supporting K'Cho Refugees in Malaysia | K'Cho Ethnic Association</title>
       <meta name="description" content="CEAM supports K'Cho and Chin refugees from Myanmar in Malaysia. We assist Dai/Daai, Mün, Kaang communities from Mindat, Kanpetlet, and other Chin State regions." />
       <meta name="keywords" content="K'Cho, Chin Refugees, Myanmar Refugees, Malaysia Refugees, Dai, Daai, Mün, Kaang, Mindat, Kanpetlet, Chin State, CEAM, Refugee Support, Asylum Seekers" />
       <meta property="og:title" content="CEAM - K'Cho Refugee Support in Malaysia" />
@@ -13,6 +13,20 @@ const Home = () => (
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://www.ceamalaysia.org" />
       <meta property="og:image" content="https://www.ceamalaysia.org/images/ceam-logo.jpg" />
+
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Community Based Organization',
+          name: 'CEA Malaysia',
+          url: 'https://www.ceamalaysia.org',
+          logo: 'https://www.ceamalaysia.org/images/cea-logo.png',
+          sameAs: [
+            'https://www.facebook.com/ceamalaysia',
+            'https://twitter.com/ceamalaysia',
+          ],
+        })}
+      </script>
     </Helmet>
     <div>
       <div className="relative h-64 md:h-96 mb-8">

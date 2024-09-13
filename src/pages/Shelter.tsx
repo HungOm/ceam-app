@@ -10,7 +10,7 @@ const Shelter = () => (
       <meta property="og:description" content="CEAM's K'Cho Shelter offers temporary support for extremely vulnerable K'Cho refugees in Malaysia, prioritizing those with mental health issues and chronic conditions." />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://www.ceamalaysia.org/shelter" />
-      <meta property="og:image" content="https://www.ceamalaysia.org/images/kcho-shelter.jpg" />
+      <meta property="og:image" content="https://www.ceamalaysia.org/images/cea-social-share.png" />
     </Helmet>
     <div className="max-w-4xl mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold mb-6">K'Cho Shelter</h2>
