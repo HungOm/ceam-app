@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="utf-8">
-    <title>Page Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | CEAM - K'Cho Ethnic Association Malaysia</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script type="text/javascript">
-      (function() {
-        var segmentCount = 1;
-        var l = window.location;
-
-        // Check if 'p' parameter is already in the URL to prevent infinite reload
-        if (!l.search.match(/[?&]p=/)) {
-          var newUrl =
-            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-            l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
-            l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
-            (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-            l.hash;
-
-          // Redirect to the new URL
-          window.location.replace(newUrl);
-        }
+      (function(){
+        var path = window.location.pathname.slice(1);
+        var url = window.location.origin + '/#/' + path;
+        window.location.replace(url);
       })();
     </script>
-  </head>
-  <body>
-  </body>
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-md max-w-md w-full text-center">
+        <img src="/images/cea-logo.png" alt="CEAM Logo" class="mx-auto mb-6 h-24">
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">Page Not Found</h1>
+        <p class="text-gray-600 mb-6">We're sorry, but the page you're looking for doesn't exist or has been moved.</p>
+        <p class="text-gray-600 mb-8">You're being redirected to our homepage...</p>
+        <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto"></div>
+        <noscript>
+            <p class="mt-6 text-gray-600">If you are not redirected automatically, please <a href="/" class="text-blue-500 hover:underline">click here</a> to go to our homepage.</p>
+        </noscript>
+        <p class="mt-8 text-sm text-gray-500">CEAM - Supporting K'Cho Refugees in Malaysia</p>
+    </div>
+</body>
 </html>

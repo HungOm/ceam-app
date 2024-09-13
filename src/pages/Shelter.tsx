@@ -36,7 +36,7 @@ const Shelter = () => (
         <a href="mailto:kchoshelter@ceamalaysia.org" className="text-blue-600 hover:underline">kchoshelter@ceamalaysia.org</a>
       </p>
       <p className="mb-4 text-lg">
-        For emergencies involving individuals with severe mental health crises outside of regular hours, please call our emergency hotline at: +60 1XX XXX XXXX
+        For emergencies involving individuals with severe mental health crises outside of regular hours, please call our emergency hotline at: +60 17-953 3189
       </p>
       <p className="mb-4 text-lg font-semibold text-red-600">
         Please note: This shelter is not a solution for general housing issues. It is specifically designed for temporary support of extremely vulnerable individuals, particularly those with mental health concerns or severe chronic conditions.
