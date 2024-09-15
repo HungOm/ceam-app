@@ -1,15 +1,51 @@
+// src/pages/NotFound.tsx
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Seo from '../components/Seo'; // Adjust the path based on your project structure
 import { Link } from 'react-router-dom';
+import { commonKeywords } from '../../commonKeywords'; // Ensure this path is correct
 
 const NotFound: React.FC = () => {
+  const pageKeywords = [
+    "404 Error",
+    "Page Not Found",
+    "CEAM Support",
+    "K'Cho Refugees",
+    "Malaysia Refugees",
+    "CEAM Homepage",
+    "Refugee Assistance",
+    "Community Support",
+    "Humanitarian Aid",
+    "Cultural Preservation",
+    "Asylum Seekers Support",
+    "Myanmar Conflict Aid"
+  ];
+
+  const allKeywords = [...commonKeywords, ...pageKeywords];
+
+  const pageTitle = "Page Not Found | CEAM - K'Cho Ethnic Association Malaysia";
+  const pageDescription = "The page you are looking for could not be found. Please check the URL or return to the CEAM homepage.";
+
   return (
     <>
-      <Helmet>
-        <title>Page Not Found | CEAM - K'Cho Ethnic Association Malaysia</title>
-        <meta name="description" content="The page you are looking for could not be found. Please check the URL or return to the CEAM homepage." />
-        <meta name="robots" content="noindex, nofollow" />
-      </Helmet>
+      {/* Seo Component */}
+      <Seo
+        title={pageTitle}
+        description={pageDescription}
+        keywords={allKeywords}
+        metaTags={[
+          { name: 'robots', content: 'noindex, nofollow' },
+          // Optionally, you can customize Open Graph and Twitter tags for 404 pages
+          { property: 'og:title', content: pageTitle },
+          { property: 'og:description', content: pageDescription },
+          { property: 'og:url', content: 'https://www.ceamalaysia.org/404' }, // Update URL accordingly
+          { property: 'og:image', content: 'https://www.ceamalaysia.org/images/cea-social-share.png' },
+          { name: 'twitter:title', content: pageTitle },
+          { name: 'twitter:description', content: pageDescription },
+          { name: 'twitter:image', content: 'https://www.ceamalaysia.org/images/cea-social-share.png' },
+        ]}
+      />
+
+      {/* Page Content */}
       <div className="max-w-4xl mx-auto px-4 py-16 text-center">
         <h1 className="text-4xl font-bold mb-4 text-cea-blue">404 - Page Not Found</h1>
         <p className="text-xl mb-8">We're sorry, but the page you're looking for doesn't exist or has been moved.</p>

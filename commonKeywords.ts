@@ -1,5 +1,5 @@
 // commonKeywords.js
-export const commonKeywords = [
+export const commonKeywords: string[]= [
     "K'Cho", "Chin", "Myanmar Refugees", "Malaysia Refugees",
     "Dai", "Daai", "Mün", "M'Kaang", "Kaang",
     "Mindat", "Kanpetlet", "Chin State", "CEAM",
