@@ -11,25 +11,31 @@ const links = [
   { url: '/contact', changefreq: 'monthly', priority: 0.7 },
 ];
 
-const sitemapStream = new SitemapStream({ hostname: 'https://www.ceamalaysia.org' });
+async function generateSitemap() {
+  try {
+    // Create a write stream to the desired sitemap location
+    const writeStream = createWriteStream('./public/sitemap.xml');
 
-const writeStream = createWriteStream('./public/sitemap.xml');
+    // Instantiate SitemapStream with your hostname
+    const sitemapStream = new SitemapStream({ hostname: 'https://www.ceamalaysia.org' });
 
-streamToPromise(sitemapStream)
-  .then((data) => {
-    console.log('Sitemap generated!');
-  })
-  .catch((error) => {
+    // Pipe SitemapStream to writeStream
+    sitemapStream.pipe(writeStream);
+
+    // Write each URL to the sitemap stream
+    links.forEach((link) => sitemapStream.write(link));
+
+    // End the sitemap stream
+    sitemapStream.end();
+
+    // Wait until the stream is finished
+    await streamToPromise(sitemapStream);
+
+    console.log('Sitemap generated successfully!');
+  } catch (error) {
     console.error('Error generating sitemap:', error);
-  });
+  }
+}
 
-// Write each URL to the stream
-links.forEach((link) => {
-  sitemapStream.write(link);
-});
-
-// End the stream
-sitemapStream.end();
-
-// Pipe the stream to writeStream
-sitemapStream.pipe(writeStream);
+// Execute the sitemap generation
+generateSitemap();

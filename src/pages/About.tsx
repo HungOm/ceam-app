@@ -5,7 +5,7 @@ const About = () => (
     <Helmet>
       <title>About CEAM | K'Cho Ethnic Association Malaysia</title>
       <meta name="description" content="Learn about CEAM's work supporting K'Cho refugees from Chin State, Myanmar in Malaysia. We serve Dai/Daai, Mün, Kaang communities from Mindat, Kanpetlet, and other regions." />
-      <meta name="keywords" content="CEAM, K'Cho Refugees, Chin State, Myanmar, Malaysia, Dai, Daai, Mün, Kaang, Mindat, Kanpetlet, Matupi, Paletwa, Refugee Support, Chin Ethnic Groups" />
+      {/* <meta name="keywords" content="CEAM, K'Cho Refugees, Chin State, Myanmar, Malaysia, Dai, Daai, Mün, Kaang, Mindat, Kanpetlet, Matupi, Paletwa, Refugee Support, Chin Ethnic Groups" /> */}
       <meta property="og:title" content="About CEAM - Supporting K'Cho Refugees in Malaysia" />
       <meta property="og:description" content="CEAM supports K'Cho refugees from Chin State, Myanmar in Malaysia. Learn about our work with Dai/Daai, Mün, Kaang, and other Chin ethnic communities." />
       <meta property="og:type" content="website" />

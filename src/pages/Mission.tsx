@@ -1,17 +1,39 @@
 import { Helmet } from 'react-helmet-async';
+import { commonKeywords } from '../../commonKeywords';
 
-const Mission = () => (
-  <>
-    <Helmet>
-      <title>Our Mission | CEAM - Empowering K'Cho Refugees in Malaysia</title>
-      <meta name="description" content="CEAM's mission is to empower K'Cho refugees from Chin State, Myanmar in Malaysia. We focus on community support, cultural preservation, and integration for Dai/Daai, Mün, Kaang, and other Chin ethnic groups." />
-      <meta name="keywords" content="CEAM Mission, K'Cho Empowerment, Chin Refugees, Myanmar Refugees in Malaysia,Chin Refugee In Malaysia, Help K'Cho Refugees, Dai, Daai, Mün, Kaang, Mindat, Kanpetlet, Cultural Preservation, Refugee Integration" />
-      <meta property="og:title" content="CEAM Mission - Empowering K'Cho Refugees in Malaysia" />
-      <meta property="og:description" content="Discover CEAM's mission to empower K'Cho refugees from Chin State, Myanmar in Malaysia. Focus on community support, cultural preservation, and integration." />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.ceamalaysia.org/mission" />
-      <meta property="og:image" content="https://www.ceamalaysia.org/images/cea-social-share.png" />
-    </Helmet>
+const Mission = () => {
+  const pageKeywords = [
+    "CEAM Mission", "K'Cho Empowerment", "Chin Refugees",
+    "Community Support", "Cultural Preservation", "Refugee Integration",
+    "Refugee Rights Advocacy", "Positive Integration", "UNHCR Collaboration",
+    "Humanitarian Goals", "Ethical Operation", "Community Resilience",
+    "Empowerment and Protection", "Social Ethics", "Displacement Challenges"
+  ];
+
+  const allKeywords = [...commonKeywords, ...pageKeywords].join(', ');
+
+  const pageTitle = "Our Mission | CEAM - Empowering K'Cho Refugees in Malaysia";
+  const pageDescription = "CEAM's mission is to empower K'Cho and Chin refugees from Myanmar in Malaysia. We focus on community support, cultural preservation, and integration for Dai/Daai, Mün, Kaang, and other Chin ethnic groups.";
+
+  return (
+    <>
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={allKeywords} />
+        {/* Open Graph */}
+        <meta property="og:title" content="Our Mission - Empowering K'Cho & Chin Refugees in Malaysia" />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ceamalaysia.org/mission" />
+        <meta property="og:image" content="https://www.ceamalaysia.org/images/cea-social-share.png" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Our Mission - Empowering K'Cho & Chin Refugees in Malaysia" />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content="https://www.ceamalaysia.org/images/cea-social-share.png" />
+      </Helmet>
+
     <div className="max-w-4xl mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold mb-6">Our Mission and Vision</h2>
       <h3 className="text-2xl font-semibold mb-3">Our Vision</h3>
@@ -37,6 +59,7 @@ const Mission = () => (
       </ul>
     </div>
   </>
-);
+)
+};
 
 export default Mission;

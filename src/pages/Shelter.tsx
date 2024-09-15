@@ -1,17 +1,39 @@
+// Shelter.js
 import { Helmet } from 'react-helmet-async';
+import { commonKeywords } from '../../commonKeywords';
 
-const Shelter = () => (
-  <>
-    <Helmet>
-      <title>K'Cho Shelter | CEAM - Supporting Vulnerable Refugees in Malaysia</title>
-      <meta name="description" content="CEAM's K'Cho Shelter provides temporary support for extremely vulnerable K'Cho refugees in Malaysia, focusing on individuals with mental health issues and chronic conditions." />
-      <meta name="keywords" content="K'Cho Shelter, CEAM, Vulnerable Refugee Support, Chin State, Myanmar Refugees, Malaysia, Mental Health Support, Chronic Conditions, Temporary Shelter" />
-      <meta property="og:title" content="K'Cho Shelter - CEAM Support for Vulnerable Refugees in Malaysia" />
-      <meta property="og:description" content="CEAM's K'Cho Shelter offers temporary support for extremely vulnerable K'Cho refugees in Malaysia, prioritizing those with mental health issues and chronic conditions." />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.ceamalaysia.org/shelter" />
-      <meta property="og:image" content="https://www.ceamalaysia.org/images/cea-social-share.png" />
-    </Helmet>
+const Shelter = () => {
+  const pageKeywords = [
+    "K'Cho Shelter", "Vulnerable Refugee Support", "Mental Health Support",
+    "Chronic Conditions", "Temporary Shelter", "Refugee Accommodation",
+    "Emergency Support", "CEAM Shelter Services", "Health Challenges",
+    "Mental Health Crises", "Humanitarian Needs", "Refugee Housing Assistance",
+    "Shelter for Asylum Seekers", "Crisis Intervention"
+  ];
+
+  const allKeywords = [...commonKeywords, ...pageKeywords].join(', ');
+
+  const pageTitle = "K'Cho Shelter | CEAM - Supporting Vulnerable Refugees in Malaysia";
+  const pageDescription = "CEAM's K'Cho Shelter provides temporary support for extremely vulnerable K'Cho refugees in Malaysia, focusing on individuals with mental health issues and chronic conditions.";
+
+  return (
+    <>
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={allKeywords} />
+        {/* Open Graph */}
+        <meta property="og:title" content="K'Cho Shelter - CEAM Support for Vulnerable Refugees in Malaysia" />
+        <meta property="og:description" content="CEAM's K'Cho Shelter offers temporary support for extremely vulnerable K'Cho refugees in Malaysia, prioritizing those with mental health issues and chronic conditions." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ceamalaysia.org/shelter" />
+        <meta property="og:image" content="https://www.ceamalaysia.org/images/cea-social-share.png" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="K'Cho Shelter - CEAM Support for Vulnerable Refugees in Malaysia" />
+        <meta name="twitter:description" content="CEAM's K'Cho Shelter offers temporary support for extremely vulnerable K'Cho refugees in Malaysia, prioritizing those with mental health issues and chronic conditions." />
+        <meta name="twitter:image" content="https://www.ceamalaysia.org/images/cea-social-share.png" />
+      </Helmet>
     <div className="max-w-4xl mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold mb-6">K'Cho Shelter</h2>
       <p className="mb-4 text-lg">
@@ -43,6 +65,7 @@ const Shelter = () => (
       </p>
     </div>
   </>
-);
+)
+};
 
 export default Shelter;

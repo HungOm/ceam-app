@@ -1,18 +1,39 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { commonKeywords } from '../../commonKeywords';
 
-const Community = () => (
-  <>
-    <Helmet>
-      <title>Community Efforts | CEAM - Supporting K'Cho Refugees in Malaysia</title>
-      <meta name="description" content="CEAM's community efforts for K'Cho refugees from Chin State, Myanmar in Malaysia. Services include education, healthcare, cultural preservation, and UNHCR registration support for Dai/Daai, Mün, Kaang communities." />
-      <meta name="keywords" content="CEAM Community Services, K'Cho Refugee Support, Chin State, Myanmar Refugees,Chin, Chin Refugees, K'Cho Refugees in Malaysia, Dai, Daai, Mün, Kaang, Mindat, Kanpetlet, Matupi, Paletwa, Education, Healthcare, UNHCR Registration, Cultural Preservation" />
-      <meta property="og:title" content="CEAM Community Efforts for K'Cho Refugees in Malaysia" />
-      <meta property="og:description" content="Explore CEAM's community services for K'Cho refugees from Chin State, Myanmar in Malaysia. Education, healthcare, cultural preservation, and UNHCR support." />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.ceamalaysia.org/community" />
-      <meta property="og:image" content="https://www.ceamalaysia.org/images/cea-social-share.png" />
-    </Helmet>
+const Community = () => {
+  const pageKeywords = [
+    "CEAM Community Services", "K'Cho Refugee Support", "Chin State", "Myanmar Refugees",
+    "Education Services", "Healthcare Access", "UNHCR Registration Support",
+    "Cultural Preservation", "Shelter Support", "Mental Health Services",
+    "Community Development", "Refugee Integration", "Humanitarian Assistance",
+    "Vulnerable Populations", "Refugee Assistance Programs", "Community-Based Organization"
+  ];
+
+  const allKeywords = [...commonKeywords, ...pageKeywords].join(', ');
+
+  const pageTitle = "Community Efforts | CEAM - Supporting K'Cho Refugees in Malaysia";
+  const pageDescription = "CEAM's community efforts for K'Cho and Chin refugees from Myanmar in Malaysia. Services include education, healthcare, cultural preservation, and UNHCR registration support for Dai/Daai, Mün, Kaang communities.";
+
+  return (
+    <>
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={allKeywords} />
+        {/* Open Graph */}
+        <meta property="og:title" content="Community Efforts - Supporting K'Cho & Chin Refugees in Malaysia" />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ceamalaysia.org/community" />
+        <meta property="og:image" content="https://www.ceamalaysia.org/images/cea-social-share.png" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Community Efforts - Supporting K'Cho & Chin Refugees in Malaysia" />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content="https://www.ceamalaysia.org/images/cea-social-share.png" />
+      </Helmet>
     <div className="max-w-4xl mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold mb-6">Our Community Efforts</h2>
       <p className="mb-4 text-lg">
@@ -37,6 +58,7 @@ const Community = () => (
       </p>
     </div>
   </>
-);
+)
+}
 
 export default Community;

@@ -1,33 +1,40 @@
 import { Helmet } from 'react-helmet-async';
+import { commonKeywords } from '../../commonKeywords';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const Home = () => (
-  <>
-    <Helmet>
-      <title>CEAM - Supporting K'Cho Refugees in Malaysia | K'Cho Ethnic Association</title>
-      <meta name="description" content="CEAM supports K'Cho and Chin refugees from Myanmar in Malaysia. We assist Dai/Daai, Mün, Kaang communities from Mindat, Kanpetlet, and other Chin State regions." />
-      <meta name="keywords" content="K'Cho, Chin Refugees, Myanmar Refugees, Malaysia Refugees, Dai, Daai, Mün, Kaang, Mindat, Kanpetlet, Chin State, CEAM, Refugee Support, Asylum Seekers" />
-      <meta property="og:title" content="CEAM - K'Cho Refugee Support in Malaysia" />
-      <meta property="og:description" content="Supporting K'Cho and Chin refugees from Myanmar in Malaysia. Community services for Dai/Daai, Mün, Kaang, and other Chin ethnic groups." />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.ceamalaysia.org" />
-      <meta property="og:image" content="https://www.ceamalaysia.org/images/ceam-logo.jpg" />
+const Home = () => {
+  const pageKeywords = [
+    "K'Cho Ethnic Association", "CEAM Home", "Supporting Refugees",
+    "Myanmar Conflict Aid", "Community Network", "Asylum Seekers Support",
+    "Cultural Heritage Preservation", "Refugee Assistance in Malaysia",
+    "Chin Ethnic Groups", "UNHCR Malaysia", "Humanitarian Support",
+    "Mindat", "Kanpetlet", "Chin State Refugees"
+  ];
 
-      <script type="application/ld+json">
-        {JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'Community Based Organization',
-          name: 'CEA Malaysia',
-          url: 'https://www.ceamalaysia.org',
-          logo: 'https://www.ceamalaysia.org/images/cea-logo.png',
-          sameAs: [
-            'https://www.facebook.com/ceamalaysia',
-            'https://twitter.com/ceamalaysia',
-          ],
-        })}
-      </script>
-    </Helmet>
+  const allKeywords = [...commonKeywords, ...pageKeywords].join(', ');
+
+  const pageTitle = "CEAM - Supporting K'Cho & Chin Refugees in Malaysia | K'Cho Ethnic Association";
+  const pageDescription = "CEAM supports K'Cho and Chin refugees from Myanmar in Malaysia. We assist communities from Mindat, Kanpetlet, and other Chin State regions with humanitarian aid and cultural preservation.";
+
+  return (
+    <>
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={allKeywords} />
+        {/* Open Graph */}
+        <meta property="og:title" content="CEAM - Supporting K'Cho & Chin Refugees in Malaysia" />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ceamalaysia.org" />
+        <meta property="og:image" content="https://www.ceamalaysia.org/images/ceam-logo.jpg" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="CEAM - Supporting K'Cho & Chin Refugees in Malaysia" />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content="https://www.ceamalaysia.org/images/ceam-logo.jpg" />
+      </Helmet>
     <div>
       <div className="relative h-64 md:h-96 mb-8">
         <img src="/images/cover-photo.png" alt="Refugees helping each other" className="w-full h-full object-cover" />
@@ -51,6 +58,7 @@ const Home = () => (
       </div>
     </div>
   </>
-);
+)
+};
 
 export default Home;
