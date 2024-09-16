@@ -1,51 +1,25 @@
-// pages/home.tsx
 import React from 'react';
-import Seo from '../components/Seo'; 
+import Seo from '../components/Seo';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { commonKeywords } from '../../commonKeywords';
+import { commonKeywords, keywordTrails, homepageKeywords, homepageKeywordTrails } from '../../commonKeywords';
 
 const Home: React.FC = () => {
-  const pageKeywords = [
-    "K'Cho Ethnic Association",
-    "CEAM Home",
-    "Supporting Refugees",
-    "Myanmar Conflict Aid",
-    "Community Network",
-    "Asylum Seekers Support",
-    "Cultural Heritage Preservation",
-    "Refugee Assistance in Malaysia",
-    "Chin Ethnic Groups",
-    "UNHCR Malaysia",
-    "Humanitarian Support",
-    "Mindat",
-    "Kanpetlet",
-    "Chin State Refugees"
-  ];
-
-  // Combine common keywords with page-specific keywords
-  const allKeywords = [...commonKeywords, ...pageKeywords];
-
+  const allKeywords = [...commonKeywords, ...keywordTrails, ...homepageKeywords, ...homepageKeywordTrails];
   const pageTitle = "CEAM - Supporting K'Cho & Chin Refugees in Malaysia | K'Cho Ethnic Association";
-  const pageDescription = "CEAM supports K'Cho and Chin refugees from Myanmar in Malaysia. We assist communities from Mindat, Kanpetlet, and other parts of southen Chin State regions with humanitarian aid and cultural preservation.";
+  const pageDescription = "CEAM supports K'Cho and Chin refugees from Myanmar in Malaysia. We assist communities from Mindat, Kanpetlet, and other parts of southern Chin State regions with humanitarian aid and cultural preservation.";
 
   return (
     <>
-      {/* Seo Component */}
       <Seo
         title={pageTitle}
         description={pageDescription}
         keywords={allKeywords}
-        // Optionally, you can pass additional metaTags or linkTags if needed
-        // metaTags={[
-        //   { property: 'og:image', content: 'https://www.ceamalaysia.org/images/ceam-logo.jpg' },
-        // ]}
-        // linkTags={[
-        //   { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto', crossOrigin: 'anonymous' },
-        // ]}
+        metaTags={[
+          { property: 'og:image', content: 'https://www.ceamalaysia.org/images/cea-social-share.png' },
+          { name: 'twitter:image', content: 'https://www.ceamalaysia.org/images/cea-social-share.png' },
+        ]}
       />
-
-      {/* Page Content */}
       <div>
         <div className="relative h-64 md:h-96 mb-8">
           <img
@@ -59,11 +33,29 @@ const Home: React.FC = () => {
             </h1>
           </div>
         </div>
-        <div className="max-w-4xl mx-auto px-4">
-          <p className="mb-4 text-lg">
+        <div className="max-w-4xl mx-auto px-4 py-8">
+          <h2 className="text-3xl font-semibold mb-4">Welcome to CEAM</h2>
+          <p className="mb-6 text-lg">
             The K'Cho (pronounced "Cho" - /tʃoʊ/) Ethnic Association Malaysia (CEAM) is a dedicated community network supporting K'Cho refugees and asylum-seekers in Malaysia. Our community consists of individuals who have fled conflict and persecution in Myanmar, seeking safety and a chance for a better life.
           </p>
-          {/* Add more content here */}
+          
+          <h2 className="text-3xl font-semibold mb-4">Our Mission</h2>
+          <p className="mb-6 text-lg">
+            At CEAM, we are committed to:
+          </p>
+          <ul className="list-disc pl-8 mb-6 text-lg">
+            <li>Providing humanitarian aid and emergency assistance</li>
+            <li>Supporting cultural preservation and community development</li>
+            <li>Facilitating access to education and healthcare</li>
+            <li>Advocating for refugee rights and positive integration</li>
+            <li>Collaborating with UNHCR and other organizations to improve the lives of K'Cho refugees</li>
+          </ul>
+          
+          <h2 className="text-3xl font-semibold mb-4">Get Involved</h2>
+          <p className="mb-6 text-lg">
+            Your support can make a significant difference in the lives of K'Cho refugees. Whether through volunteering, donating, or spreading awareness, every action counts.
+          </p>
+          
           <div className="mt-8 text-center">
             <Link
               to="/about"
