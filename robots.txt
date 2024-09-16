@@ -1,4 +1,10 @@
 User-agent: *
-Allow: /
-
 Sitemap: https://ceamalaysia.org/sitemap.xml
+
+Allow: /#/
+Allow: /#/about
+Allow: /#/mission
+Allow: /#/community
+Allow: /#/shelter
+Allow: /#/contact
+Allow: /
